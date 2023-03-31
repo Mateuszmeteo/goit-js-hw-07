@@ -54,21 +54,11 @@ console.log(galleryItems);
 
 const galleryBase = document.querySelector('.gallery');
 
-// galleryItems.forEach((item) => {
-//     galleryBase.innerHTML += 
-//     `<li class="gallery__item">
-//     <a class="gallery__link" href="${item.ogiginal}">
-//        <img class="gallery__image" src="${item.preview}" alt="${item.description}" />
-//     </a>
-//  </li>`;
-// })
-
-
 
 for (const item of galleryItems) {
     const galEl = 
     `<li>
-    <a class="gallery__item" href="${item.ogiginal}">
+    <a class="gallery__item" href="${item.original}">
        <img class="gallery__image" src="${item.preview}" alt="${item.description}" />
     </a>
  </li>`;
@@ -82,6 +72,18 @@ const lightBox = new SimpleLightbox(".gallery a", {
 })
 
 
+
+
+
+
+// galleryItems.forEach((item) => {
+//     galleryBase.innerHTML += 
+//     `<li class="gallery__item">
+//     <a class="gallery__link" href="${item.ogiginal}">
+//        <img class="gallery__image" src="${item.preview}" alt="${item.description}" />
+//     </a>
+//  </li>`;
+// })
 
 
 
