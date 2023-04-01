@@ -87,22 +87,44 @@ for ( const image of galleryItems) {
 
 galleryBase.addEventListener('click', (e) => {
     e.preventDefault();
-    basicLightbox.create(`
+    const gallery = basicLightbox.create(`
         <img 
             src="${e.target.dataset.source}"
         />`)
-        .show();
+        gallery.show();
+        window.addEventListener('kaydown', (e) => {
+            if(e.code === `Escape`) {
+                gallery.close()
+            }
+        })
 
 });
 
 
 
-galleryBase.addEventListener('keydown', (e) =>{
-    if (e.code === 'Escape')
-    .close()
-})
 
 
+// .................................... 
+// też działa: 
+
+// galleryBase.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     basicLightbox.create(`
+//         <img 
+//             src="${e.target.dataset.source}"
+//         />`)
+//         .show();
+
+// });
+
+
+
+// galleryBase.addEventListener('keydown', (e) =>{
+//     if (e.code === 'Escape')
+//     galleryBase.close()
+// })
+
+// ....................................
 
 
 // keydown
