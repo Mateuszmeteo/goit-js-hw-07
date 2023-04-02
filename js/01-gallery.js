@@ -92,7 +92,7 @@ galleryBase.addEventListener('click', (e) => {
             src="${e.target.dataset.source}"
         />`)
         gallery.show();
-        window.addEventListener('kaydown', (e) => {
+        window.addEventListener('keydown', (e) => {
             if(e.code === `Escape`) {
                 gallery.close()
             }
